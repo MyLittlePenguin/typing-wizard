@@ -1,4 +1,4 @@
-app = cmd/main.go
+app = cmd/typing-wizard.go
 
 .PHONY: run
 run:
@@ -10,3 +10,7 @@ build:
 	# GOOS=windows GOARCH=amd64 go build -o release/typing-wizard.exe $(app)
 	# GOOS=darwin GOARCH=amd64 go build -o release/typing-wizard_darwin_amd64 $(app)
 	# GOOS=darwin GOARCH=arm64 go build -o release/typing-wizard_darwin_arm64 $(app)
+
+.PHONY: install
+install:
+	go install $(app)
